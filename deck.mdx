@@ -1,23 +1,32 @@
 import { Head, Notes } from 'mdx-deck'
+import { Split } from 'mdx-deck/layouts'
+import Highlight from './components/Highlight'
 
-export { theme } from './theme'
+export { code as theme } from 'mdx-deck/themes'
 
 <Head>
-  <title>Presentation Title</title>
+  <title>Intro to JAMStack</title>
 </Head>
 
-# Hello
+# Intro to <Highlight text="JAM" />Stack
 
 ---
+export default Split
 
-## Edit this file
+# <Highlight text="J" />-A-M
 
-To create your presentation
-
-<Notes>
-Create speaker notes with the Notes component
-</Notes>
+**JavaScript**: Any dynamic programming during the request/response cycle is handled by JavaScript, running entirely on the client.
 
 ---
+export default Split
 
-<https://github.com/jxnblk/mdx-deck>
+# J-<Highlight text="A" />-M
+
+**APIs**: All server-side functions or databases actions are abstracted into reusable APIs, accessed over HTTPS with JS. Be it SaaS, third-party services or custom-built.
+
+---
+export default Split
+
+# J-A-<Highlight text="M" />
+
+**Markup**: Templated markup should be prebuilt at build time, usually using a site generator for content sites, or a build tool for web apps
