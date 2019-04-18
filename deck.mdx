@@ -1,8 +1,9 @@
-import { Head, Notes } from 'mdx-deck'
+import { Head, Notes, Image, Appear } from 'mdx-deck'
 import { Split } from 'mdx-deck/layouts'
+import Box from './components/Box'
 import Highlight from './components/Highlight'
 
-export { code as theme } from 'mdx-deck/themes'
+export { syntaxHighlighter as theme } from 'mdx-deck/themes'
 
 <Head>
   <title>Intro to JAMStack</title>
@@ -30,3 +31,57 @@ export default Split
 # J-A-<Highlight text="M" />
 
 **Markup**: Templated markup should be prebuilt at build time, usually using a site generator for content sites, or a build tool for web apps
+
+---
+<Image src="assets/images/vs-workflow.png" size="contain" />
+
+---
+## JAMStack <Highlight text="Pros" />
+
+<ul>
+  <Appear>
+    <li>Performance</li>
+    <li>Security</li>
+    <li>Cheaper Delivery $$$</li>
+    <li>Scalability</li>
+  </Appear>
+</ul>
+
+---
+## JAMStack <Highlight text="Cons" />
+
+<ul>
+  <Appear>
+    <li>Changes in CMS are not immediate, need to build/deploy on every change</li>
+    <li>If data changes faster than build time, you will have grab that data client side</li>
+    <li>For truly dynamic apps, still will need backend API/ AWS Lambda</li>
+    <li>Not traditional app flow, no easy way to transition apps</li>
+  </Appear>
+</ul>
+
+---
+## JAMStack <Highlight text="Components" />
+
+<div style={{display: "flex"}}>
+  <Appear>
+    <div>
+      <Box text="Static Site Generator (Gatsby, Hugo, Middleman, ect.)" />
+    </div>
+    <div>
+      <Box text="Headless CMS/Data source (Contentful, Netlify CMS, YAML files, APIs ect.)" />
+    </div>
+    <div>
+      <Box text="Hosting/CDN (Netlify, AWS Cloudfront, Firebase ect.)" />
+    </div>
+  </Appear>
+</div>
+
+---
+<Image src="assets/images/jamstack-arch-example.png" size="contain" />
+
+---
+# <Highlight text="LIVE" /> DEMO 😅
+## (Gatsby, Contentful, Netlify)
+
+---
+# Q <Highlight text="+" /> A
